@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+
+    <color name="mint">#37d3c5</color>
+    <color name="mint_dark">#2eb4a3</color>
+    <color name="mint_darker">#196357</color>
+    <color name="mint_light">#5adfcc</color>
+    <color name="mint_lighter">#a1f2e4</color>
+
+    <color name="gray">#575e5e</color>
+    <color name="gray_dark">#313535</color>
+    <color name="gray_darker">#111111</color>
+    <color name="gray_light">#bfc4c4</color>
+    <color name="gray_lighter">#e5eaea</color>
+
+    <color name="danger">#f1436d</color>
+    <color name="danger_dark">#bf2e57</color>
+
+    <color name="warning">#fbdd48</color>
+    <color name="warning_dark">#c5ab3d</color>
+
+    <color name="info">#b1eb66</color>
+    <color name="info_dark">#83ac45</color>
+
+    <color name="primary">@color/mint</color>
+    <color name="primary_dark">@color/mint_dark</color>
+
+    <color name="success">#3e9af6</color>
+    <color name="success_dark">#2781bf</color>
+
+    <color name="disabled">@color/gray_lighter</color>
+    <color name="disabled_dark">@color/gray_light</color>
+</resources>
