@@ -14,7 +14,7 @@ public trait UserService {
     fun register(Field ("email") email: String,
                  Field ("username") username: String,
                  Field ("password") password: String,
-                 Field ("confirm") confirm: String,
+                 Field ("password_repeat") passwordRepeat: String,
                  callback: Callback<UserResponse>)
 
     POST ("/api/login")
