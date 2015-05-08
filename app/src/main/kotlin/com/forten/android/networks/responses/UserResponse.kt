@@ -12,4 +12,5 @@ public class UserResponse : BasicResponse() {
     }
 
     var accessToken: String? = null
+    var user: User? = null
 }
