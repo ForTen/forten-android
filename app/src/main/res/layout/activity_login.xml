@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo"/>
+
+    <ImageView
+        android:id="@+id/iv_slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/iv_logo"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/slogan_text"/>
+
+    <LinearLayout
+        android:id="@+id/lo_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/margin_huge"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_default_height"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:background="@drawable/rectangle_gray_lighter"
+            android:textColor="@color/gray_darker"
+            android:textColorHint="@color/gray_light"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_default_height"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium"
+            android:background="@drawable/rectangle_gray_lighter"
+            android:textColor="@color/gray_darker"
+            android:textColorHint="@color/gray_light"
+            android:inputType="textPassword"
+            android:hint="@string/password"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_default_height"
+            android:background="@drawable/btn_primary_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_medium"
+            android:text="@string/login"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_ingichuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:src="@drawable/ingichuk"
+        android:visibility="gone"/>
+
+</RelativeLayout>
