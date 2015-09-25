@@ -1,7 +1,5 @@
 package com.forten.android.networks.responses
 
-import com.forten.android.networks.responses.BasicResponse
-
 /**
  * Created by mspark on 2015. 5. 8..
  */

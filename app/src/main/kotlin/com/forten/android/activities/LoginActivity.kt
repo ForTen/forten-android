@@ -12,13 +12,13 @@ import com.forten.android.R
  */
 public class LoginActivity : Activity() {
 
-    private var ivSlogan: ImageView? = null
-    private var ivLogo: ImageView? = null
-    private var loInput: LinearLayout? = null
-    private var etEmail: EditText? = null
-    private var etPassword: EditText? = null
-    private var btnLogin: Button? = null
-    private var ivIngichuk: ImageView? = null
+    private lateinit var ivSlogan: ImageView
+    private lateinit var ivLogo: ImageView
+    private lateinit var loInput: LinearLayout
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var btnLogin: Button
+    private lateinit var ivIngichuk: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,18 +37,18 @@ public class LoginActivity : Activity() {
     }
 
     private fun enter() {
-        var lp = ivLogo?.getLayoutParams() as RelativeLayout.LayoutParams
+        var lp = ivLogo.getLayoutParams() as RelativeLayout.LayoutParams
 
         lp.removeRule(RelativeLayout.CENTER_IN_PARENT)
         lp.addRule(RelativeLayout.CENTER_HORIZONTAL)
         lp.addRule(RelativeLayout.ABOVE, R.id.lo_input)
         lp.bottomMargin = getResources().getDimensionPixelSize(R.dimen.margin_huge)
 
-        ivLogo?.setLayoutParams(lp)
+        ivLogo.setLayoutParams(lp)
 
-        ivSlogan?.setVisibility(View.INVISIBLE)
-        loInput?.setVisibility(View.VISIBLE)
-        ivIngichuk?.setVisibility(View.VISIBLE)
+        ivSlogan.setVisibility(View.INVISIBLE)
+        loInput.setVisibility(View.VISIBLE)
+        ivIngichuk.setVisibility(View.VISIBLE)
     }
 }
 

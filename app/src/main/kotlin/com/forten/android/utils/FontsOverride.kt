@@ -14,7 +14,7 @@ public class FontsOverride {
         }
 
         protected fun replaceFont(staticTypefaceFieldName: String, newTypeface: Typeface) {
-            val staticField = javaClass<Typeface>().getDeclaredField(staticTypefaceFieldName)
+            val staticField = Typeface::class.java.getDeclaredField(staticTypefaceFieldName)
             staticField.setAccessible(true)
             staticField.set(null, newTypeface)
         }

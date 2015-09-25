@@ -1,7 +1,6 @@
 package com.forten.android
 
 import android.app.Application
-import android.graphics.Typeface
 import com.forten.android.utils.FontsOverride
 
 /**

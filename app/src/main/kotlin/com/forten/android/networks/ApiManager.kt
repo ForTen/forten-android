@@ -37,7 +37,7 @@ public class ApiManager {
             okHttpClient.setReadTimeout(READ_TIMEOUT_SECONDS.toLong(), TimeUnit.SECONDS)
 
             return RestAdapter.Builder().setClient(object : OkClient(okHttpClient) {
-                throws(javaClass<IOException>())
+                @Throws(IOException::class)
                 override fun execute(request: Request): Response {
                     val response = super.execute(request)
                     val statusCode = response.getStatus()
@@ -47,19 +47,14 @@ public class ApiManager {
                     return response
                 }
             }).setEndpoint(BASE_URL).setExecutors(Executors.newSingleThreadExecutor(), CALLBACK_EXECUTOR).setConverter(object : GsonConverter(GSON_BUILDER.create()) {
-                throws(javaClass<ConversionException>())
+                @Throws(ConversionException::class)
                 override fun fromBody(body: TypedInput, type: Type): Any {
-                    val obj = super.fromBody(body, type)
-                    if (obj == null) {
-                        throw ConversionException("response object is null : ${body.mimeType()}, ${body.length()}, ${body.toString()}")
-                    }
+                    val obj = super.fromBody(body, type) ?: throw ConversionException("response object is null : ${body.mimeType()}, ${body.length()}, ${body.toString()}")
                     return obj
                 }
             })
         }
 
-        public fun getUserService(): UserService {
-            return getRestAdapterBuilder().build().create(javaClass<UserService>())
-        }
+        public fun getUserService(): UserService = getRestAdapterBuilder().build().create(UserService::class.java)
     }
 }
