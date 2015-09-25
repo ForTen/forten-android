@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit
 public class ApiManager {
     companion object {
         public val BASE_HOST: String = "54.65.24.248"
-        public val BASE_URL: String = "http://" + BASE_HOST
+        public val BASE_URL: String = "http://$BASE_HOST/api"
 
         private val CALLBACK_EXECUTOR = MainThreadExecutor()
         private val GSON_BUILDER = GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
