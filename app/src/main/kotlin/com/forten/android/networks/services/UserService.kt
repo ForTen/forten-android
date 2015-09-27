@@ -6,9 +6,6 @@ import retrofit.http.Field
 import retrofit.http.FormUrlEncoded
 import retrofit.http.POST
 
-/**
- * Created by mspark on 2015. 5. 8..
- */
 public interface UserService {
     @POST ("/regist")
     @FormUrlEncoded

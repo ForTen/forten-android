@@ -3,9 +3,6 @@ package com.forten.android
 import android.app.Application
 import com.forten.android.utils.FontsOverride
 
-/**
- * Created by mspark on 2015. 5. 14..
- */
 public class ForTenApp : Application() {
     override fun onCreate() {
         super.onCreate()

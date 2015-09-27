@@ -17,9 +17,6 @@ import java.lang.reflect.Type
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 
-/**
- * Created by mspark on 2015. 5. 8..
- */
 public class ApiManager {
     companion object {
         public val BASE_HOST: String = "54.65.24.248"

@@ -12,9 +12,6 @@ import retrofit.Callback
 import retrofit.RetrofitError
 import retrofit.client.Response
 
-/**
- * Created by mspark on 2015. 5. 7..
- */
 public class LoginActivity : Activity() {
 
     private lateinit var ivSlogan: ImageView

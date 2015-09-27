@@ -1,14 +1,8 @@
 package com.forten.android.networks.responses
 
-/**
- * Created by mspark on 2015. 5. 8..
- */
-public class UserResponse : BasicResponse() {
-    class User {
-        var id: String? = null
-        var username: String? = null
-    }
+import com.forten.android.networks.models.User
 
+public class UserResponse : BasicResponse() {
     var accessToken: String? = null
     var user: User? = null
 }
