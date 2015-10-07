@@ -37,9 +37,9 @@ public class ApiManager {
                 @Throws(IOException::class)
                 override fun execute(request: Request): Response {
                     val response = super.execute(request)
-                    val statusCode = response.getStatus()
-                    if (statusCode >= 200 && statusCode < 300 && response.getBody() == null) {
-                        throw IOException("response body is empty : ${response.getUrl()}, ${statusCode}, ${response.getReason()}, ${response.getHeaders()}")
+                    val statusCode = response.status
+                    if (statusCode >= 200 && statusCode < 300 && response.body == null) {
+                        throw IOException("response body is empty : ${response.url}, $statusCode, ${response.reason}, ${response.headers}")
                     }
                     return response
                 }

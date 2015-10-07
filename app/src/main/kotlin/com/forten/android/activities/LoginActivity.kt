@@ -1,6 +1,7 @@
 package com.forten.android.activities
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -60,6 +61,7 @@ public class LoginActivity : Activity() {
 
             override fun success(t: UserResponse?, response: Response?) {
                 if (t?.success ?: false) {
+                    startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                     Toast.makeText(this@LoginActivity, "Hi ${t?.user?.username}!", Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(this@LoginActivity, "Failed!", Toast.LENGTH_LONG).show()
@@ -69,18 +71,18 @@ public class LoginActivity : Activity() {
     }
 
     private fun enter() {
-        var lp = ivLogo.getLayoutParams() as RelativeLayout.LayoutParams
+        var lp = ivLogo.layoutParams as RelativeLayout.LayoutParams
 
         lp.removeRule(RelativeLayout.CENTER_IN_PARENT)
         lp.addRule(RelativeLayout.CENTER_HORIZONTAL)
         lp.addRule(RelativeLayout.ABOVE, R.id.lo_input)
-        lp.bottomMargin = getResources().getDimensionPixelSize(R.dimen.margin_huge)
+        lp.bottomMargin = resources.getDimensionPixelSize(R.dimen.margin_huge)
 
-        ivLogo.setLayoutParams(lp)
+        ivLogo.layoutParams = lp
 
-        ivSlogan.setVisibility(View.INVISIBLE)
-        loInput.setVisibility(View.VISIBLE)
-        ivIngichuk.setVisibility(View.VISIBLE)
+        ivSlogan.visibility = View.INVISIBLE
+        loInput.visibility = View.VISIBLE
+        ivIngichuk.visibility = View.VISIBLE
     }
 }
 
