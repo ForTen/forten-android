@@ -11,4 +11,5 @@
     <dimen name="font_small">12dp</dimen>
 
     <dimen name="btn_default_height">48dp</dimen>
+    <dimen name="btn_large_height">108dp</dimen>
 </resources>

@@ -3,4 +3,5 @@
     <string name="email">E-MAIL</string>
     <string name="password">PASSWORD</string>
     <string name="login">LOG IN</string>
+    <string name="post.hint">#</string>
 </resources>

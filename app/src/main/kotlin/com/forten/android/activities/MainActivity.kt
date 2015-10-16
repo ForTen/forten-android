@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import com.forten.android.R
 import com.forten.android.adapters.FeedAdapter
 import com.forten.android.networks.models.Post
+import com.forten.android.views.MainActionBar
 import java.util.*
 
 class MainActivity : Activity() {
@@ -16,6 +17,10 @@ class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        actionBar.customView = MainActionBar(this)
+        actionBar.setDisplayShowTitleEnabled(false)
+        actionBar.setDisplayShowCustomEnabled(true)
 
         rvTimeline = findViewById(R.id.rv_timeline) as RecyclerView
 
