@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_timeline"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_timeline"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.94"
+        android:background="@drawable/bg_timeline_gradient"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/btn_default_height"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <EditText
-            style="@style/ForTenTextBox"
-            android:layout_width="0dp"
-            android:layout_height="@dimen/btn_default_height"
-            android:layout_weight="1"
-            android:hint="@string/post.hint"/>
+        <com.forten.android.views.MainTabBar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_tab_bar_height"
+            android:layout_marginBottom="@dimen/margin_timeline"/>
+
+        <com.forten.android.views.TimelineView
+            android:id="@+id/timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <Button
             style="@style/ForTenButton"
-            android:layout_width="@dimen/btn_default_height"
-            android:layout_height="@dimen/btn_default_height"/>
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_large_height"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_timeline"
+            android:text="@string/post.add"/>
 
     </LinearLayout>
 
-</LinearLayout>
+</FrameLayout>
