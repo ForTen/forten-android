@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
+    <color name="white_6">#11ffffff</color>
+    <color name="white_20">#33ffffff</color>
+    <color name="white_40">#66ffffff</color>
 
     <color name="mint">#37d3c5</color>
     <color name="mint_dark">#2eb4a3</color>

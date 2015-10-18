@@ -4,4 +4,5 @@
     <string name="password">PASSWORD</string>
     <string name="login">LOG IN</string>
     <string name="post.hint">#</string>
+    <string name="post.add">+ ADD A POST</string>
 </resources>
