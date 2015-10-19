@@ -97,4 +97,12 @@ class MainActivity : Activity() {
 
         spring.setEndValue(displayHeight.toDouble())
     }
+
+    override fun onBackPressed() {
+        if (cvAddPost.isShown) {
+            hideAddPostCard()
+        } else {
+            super.onBackPressed()
+        }
+    }
 }
