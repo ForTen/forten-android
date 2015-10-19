@@ -76,8 +76,8 @@ class TimelineView : FrameLayout {
     private fun initializeScrollView() {
         svTop.viewTreeObserver.addOnScrollChangedListener {
             val scrollX = svTop.scrollX
-            val middleScroll = scrollX * 0.6
-            val bottomScroll = scrollX * 0.3
+            val middleScroll = scrollX * containerWidthCal[1]
+            val bottomScroll = scrollX * containerWidthCal[2]
 
             val lpMiddle = flMiddle.layoutParams as FrameLayout.LayoutParams
             val lpBottom = flBottom.layoutParams as FrameLayout.LayoutParams
@@ -105,7 +105,7 @@ class TimelineView : FrameLayout {
             }
 
             val lp = FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
-            val leftMargin = (Math.random() * (timelineWidth - tv.measuredWidth)).toInt()
+            val leftMargin = (Math.random() * (timelineWidth * containerWidthCal[rand] - tv.measuredWidth)).toInt()
             val topMargin = (Math.random() * (timelineHeight - tv.measuredHeight)).toInt()
             lp.leftMargin = leftMargin
             lp.topMargin = topMargin
