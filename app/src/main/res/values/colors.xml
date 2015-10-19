@@ -5,6 +5,9 @@
     <color name="white_20">#33ffffff</color>
     <color name="white_40">#66ffffff</color>
 
+    <color name="black">#000000</color>
+    <color name="black_30">#4d000000</color>
+
     <color name="mint">#37d3c5</color>
     <color name="mint_dark">#2eb4a3</color>
     <color name="mint_darker">#196357</color>
