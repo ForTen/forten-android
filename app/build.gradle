@@ -22,6 +22,7 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.facebook.rebound:rebound:0.3.8'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
